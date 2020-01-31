@@ -1,0 +1,100 @@
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[18-Jul-2019 02:45:00 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[21-Jul-2019 05:23:12 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[21-Jul-2019 09:51:50 UTC] PHP Notice:  Undefined offset: 5 in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 187
+[21-Jul-2019 09:51:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getComponent_name() on null in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php:187
+Stack trace:
+#0 {main}
+  thrown in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 187
+[22-Jul-2019 16:46:22 UTC] PHP Notice:  Undefined index: show_spi in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[22-Jul-2019 16:50:39 UTC] PHP Parse error:  syntax error, unexpected 'show_spi' (T_STRING), expecting ']' in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[22-Jul-2019 16:51:11 UTC] PHP Parse error:  syntax error, unexpected 'show_spi' (T_STRING), expecting ']' in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 33
+[23-Jul-2019 06:46:15 UTC] PHP Notice:  Undefined index: spi in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[23-Jul-2019 06:46:49 UTC] PHP Notice:  Undefined index: spi in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[23-Jul-2019 06:49:37 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 43
+[23-Jul-2019 06:49:37 UTC] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 44
+[23-Jul-2019 07:51:09 UTC] PHP Notice:  Undefined offset: 5 in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 209
+[23-Jul-2019 07:51:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getComponent_name() on null in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php:209
+Stack trace:
+#0 {main}
+  thrown in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 209
+[16-Aug-2019 16:21:15 UTC] PHP Warning:  Division by zero in /home/x512mzzd7ayc/public_html/admin/php/class.php on line 55
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Aug-2019 07:31:36 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Aug-2019 12:23:08 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[26-Aug-2019 12:26:57 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[26-Aug-2019 12:26:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[26-Aug-2019 12:26:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[26-Aug-2019 12:26:57 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[26-Aug-2019 12:26:57 UTC] PHP Notice:  Undefined index: cal_spi in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 35
+[26-Aug-2019 12:26:58 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[26-Aug-2019 12:26:58 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[26-Aug-2019 12:26:58 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[26-Aug-2019 12:26:58 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[26-Aug-2019 12:26:58 UTC] PHP Notice:  Undefined index: cal_spi in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 35
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[27-Aug-2019 17:30:05 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:29 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 10
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 31
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 72
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 89
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109
+[24-Nov-2019 10:44:30 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/add_result/index.php on line 109

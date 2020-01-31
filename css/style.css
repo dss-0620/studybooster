@@ -1,0 +1,296 @@
+/************************************
+* Some common styles *
+************************************/
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+}
+body{
+    font-size:20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/************************************
+* Header *
+************************************/
+
+header{
+    min-height:100vh; 
+    /* background-image: linear-gradient(to bottom, #ffa600a1, #ff812d); */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('imgs/header/header-min-min.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imgs/header/signup-min2.jpg');
+    background-attachment:fixed;
+    background-size: 1511.2px 824px;
+}
+
+/* navigation */
+.but1{
+    color:white;
+}
+.but1:hover,.but1:active{
+   color:white;
+   border-bottom:1px solid white;
+   border-top:1px solid white;
+   -webkit-animation: borderAnim 0.1s 1 ease-out;
+           animation: borderAnim 0.1s 1 ease-out;
+   font-weight: 400;
+   font-size:115%; 
+   transition: border 0.4s;
+}
+.navi{
+    display:inline-block;
+}
+
+/* mobile navigation */
+
+.mobile-icon{
+   font-size:200%;
+   display: none;
+   cursor: pointer;
+}
+
+/* Main content box */
+
+.header-main-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width:62.5%;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Slogan as heading */
+
+.main-heading1 {
+   /* margin-bottom: 25px; */
+   font-size: 250%;
+   /* color: rgb(100, 100, 100); */
+   color:#d5d5d5 !important;
+   font-weight:300;
+   text-transform: uppercase;
+   -webkit-animation: MoveFromTopAnim 0.5s 1 ease-out;
+           animation: MoveFromTopAnim 0.5s 1 ease-out;
+   -webkit-animation-delay: 1s;
+           animation-delay: 1s;
+   -webkit-animation-fill-mode: backwards;
+           animation-fill-mode: backwards;
+   z-index: 2;
+}
+
+/* Modified sign up link */
+
+.anim{
+    -webkit-animation: MoveFromBotAnim 0.6s 1 ease-out;
+            animation: MoveFromBotAnim 0.6s 1 ease-out;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    z-index: 2;
+}
+.heading-button1:link, .heading-button1:visited {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 120%;
+    background-color:rgba(0,0,0,0);
+    border:2px solid #ffb122;
+    color: #ffb122;
+    text-decoration: none;
+    z-index: 2;
+}
+.heading-button1:hover, .heading-button:active {
+    background-color:#ffb122;
+    color:#664200;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* login form */
+
+.login-form{
+    width:384px;
+    margin:0 auto;
+    background-color:rgb(245, 245, 245);
+    border-radius: 8px;
+    visibility: hidden;
+    z-index: 50;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.cont1{
+    min-height:700px;
+}
+.row1{
+  padding:12px 7.5%; 
+  margin-bottom:10px;
+}
+.row1 input{
+    width:96%;
+    height:40px;
+    border-radius: 5px;
+    border:1px solid grey;
+    padding-left:15px;
+    font-size:85%;
+    margin-top:5px;
+}
+.row2 input{
+    margin-top:25px;
+}
+.btn1{
+color:white;
+background-color:#007bff;
+}
+.btn1:hover,.btn1:active{
+background-color:#006bdd;
+}
+#p1{
+    display: inline-block;
+}
+#underline1{
+    border-bottom:1px solid rgb(192, 192, 192);
+    
+}
+.icn1{
+    float:right;
+    cursor: pointer;
+    color: grey;
+}
+.icn1:hover{
+    color: black;
+    font-size: 105%;
+}
+#sp{
+    margin-right:35px;
+}
+
+.row1 small a:link,.row1 small a:visited{
+    text-decoration: none;
+    color:#007bff;
+}
+.row1 small a:active,.row1 small a:hover{
+    text-decoration: none;
+    color:blue;
+}
+/* .focus--row1 input:focus{
+     outline:none;
+} */
+.wrong1{  
+    display: none;
+    background-color: rgb(250,235,235);
+    color: rgb(138,94,101); 
+    padding:16px;
+    margin:6px 0;
+}
+.sign{
+   font-size:19px;
+   margin:0;
+}
+/************************************
+* Features *
+************************************/
+h2{
+    font-weight:300;
+    font-size:130%;
+}
+.icn-1{
+    font-size:200%;
+    color:#0b0;
+    padding-left:3px;
+}
+/************************************
+* Animations *
+************************************/
+
+@-webkit-keyframes borderAnim {
+    0%{
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    100%{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@keyframes borderAnim {
+    0%{
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    100%{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+@-webkit-keyframes MoveFromTopAnim {
+    0%{
+        -webkit-transform: translateY(-200px);
+                transform: translateY(-200px);
+        opacity: 0;
+    }
+    80%{
+        -webkit-transform: translateY(15px);
+                transform: translateY(15px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes MoveFromTopAnim {
+    0%{
+        -webkit-transform: translateY(-200px);
+                transform: translateY(-200px);
+        opacity: 0;
+    }
+    80%{
+        -webkit-transform: translateY(15px);
+                transform: translateY(15px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes MoveFromBotAnim {
+    0%{
+        -webkit-transform: translateY(250px);
+                transform: translateY(250px);
+        opacity: 0;
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes MoveFromBotAnim {
+    0%{
+        -webkit-transform: translateY(250px);
+                transform: translateY(250px);
+        opacity: 0;
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,83 @@
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[13-Jul-2019 12:57:57 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[18-Jul-2019 02:44:44 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[13-Aug-2019 10:01:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[13-Aug-2019 10:10:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[13-Aug-2019 10:10:50 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[13-Aug-2019 10:11:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[13-Aug-2019 12:30:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[13-Aug-2019 12:30:50 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[14-Aug-2019 10:14:10 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[14-Aug-2019 10:14:10 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[15-Aug-2019 04:08:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[15-Aug-2019 04:49:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[15-Aug-2019 04:49:50 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[15-Aug-2019 04:50:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[15-Aug-2019 04:50:11 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[15-Aug-2019 04:55:23 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[15-Aug-2019 08:58:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[15-Aug-2019 08:58:31 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[16-Aug-2019 09:43:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[16-Aug-2019 13:22:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[16-Aug-2019 16:20:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[16-Aug-2019 16:20:49 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[18-Aug-2019 08:36:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[18-Aug-2019 09:02:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[24-Aug-2019 11:27:54 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[25-Aug-2019 08:49:37 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[25-Aug-2019 08:49:38 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[27-Aug-2019 05:27:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[27-Aug-2019 05:27:25 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 67
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[27-Aug-2019 15:18:57 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[28-Aug-2019 04:55:36 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[20-Nov-2019 11:44:56 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7
+[20-Nov-2019 11:45:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/admin/php/delete.php on line 1
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/admin/php/header.php on line 9
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 9
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/admin/php/navigation.php on line 33
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 5
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 6
+[09-Dec-2019 06:42:20 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/admin/php/profile/index.php on line 7

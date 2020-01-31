@@ -1,0 +1,4 @@
+[28-Jan-2020 05:15:09 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[28-Jan-2020 05:15:09 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[28-Jan-2020 05:15:09 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[28-Jan-2020 05:15:09 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
