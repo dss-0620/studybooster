@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="css1/style.css">
     <title>Studybooster</title>
 </head>
-<body class="bg-light">
+<body class="bg-light" data-spy="scroll" data-target="#main-navigation" id="home">
     <!-- HEADER -->
     <header id="main-header">
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top main-navigation">
             <div class="container">
                 <img href="" src="css1/img/logo1.png" class="img-fluid navbar-brand" style="height:65px;width:auto;">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#NAVBAR">
@@ -74,6 +74,7 @@
             </div>
         </div>
     </header>
+        <!-- FEATURES -->
     <!-- FOOTER -->
     <footer id="main-footer" class="pt-5 pb-4 bg-dark text-light">
         <div class="container d-flex justify-content-center">
