@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css1/style.css">
     <title>Studybooster</title>
 </head>
@@ -74,7 +75,33 @@
             </div>
         </div>
     </header>
-        <!-- FEATURES -->
+    <!-- FEATURES -->
+    <section id="features" class="pt-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <h1 class="title">Features</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="icn-1"><i class="icon ion-md-fastforward"></i></div>
+                    <h2 class="sub-title">Fast and easy</h2>
+                    <span>Why waste your valuable time! When performing simple steps can give you estimated pointers.</span>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="icn-1"><i class="icon ion-ios-save"></i></div>
+                    <h2 class="sub-title">Save and review</h2>
+                   <span>You can just save and edit your calculated result and look through it anytime you want. No
+                        notes or diaries to be written !</span>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="icn-1"><i class="icon ion-ios-lock"></i></div>
+                    <h2 class="sub-title">Secure</h2>
+                   <span>Your pointers are your pointers and not anyone else business. Your pointers are safe and so
+                    don’t worry about anyone finding it.</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER -->
     <footer id="main-footer" class="pt-5 pb-4 bg-dark text-light">
         <div class="container d-flex justify-content-center">
@@ -126,18 +153,32 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
     <style>
-    .head-cont{
-        font-weight:300;
-        font-size:35px;
-    }
-    .icn-1{
-        font-size:45px;
-        color:#0b0;
-        padding-left:3px;
-    }
-    .text-cont{
-        font-size:21px;
-    }
-</style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .title,.sub-title{
+            font-weight:300;
+        }
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        #features{
+            font-size:20px;
+            padding-bottom:90px !important;
+        }
+        .head-cont{
+            font-weight:300;
+            font-size:35px;
+        }
+        .icn-1{
+            font-size:45px;
+            color:#0b0;
+            padding-left:3px;
+        }
+        .text-cont{
+            font-size:21px;
+        }
+    </style>
 </body>
 </html>
