@@ -55,7 +55,7 @@
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000; background-color:rgba(0,0,0,0) !important;">
                     <div class="container">
                         <a href="" class="navbar-brand">Studybooster</a>
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#NAVBAR">
+                        <button class="navbar-toggler" data-toggle="collapse" onclick="change()" data-target="#NAVBAR">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="NAVBAR">
@@ -149,7 +149,7 @@
                 </div>
                 <div class="col-md-6  d-none d-md-flex justify-content-md-end">
                     <div class="card text-center text-light col-md-12 col-lg-10" style="background-color:rgb(252,252,252);">
-                        <div class="card-body">
+                        <div class="card-body" id="login-card">
                             <h5 class="card-text mt-3 mb-5 text-dark">Log In</h3>
                             <form action="php/login.php" class="form-group" method="POST">
                                 <div class="form-group input-group my-4">
@@ -173,6 +173,11 @@
             </div>
         </div>
     </div> 
+    <script>
+        function change(){
+            document.querySelector('.navbar').style.backgroundColor="#f0f0f0";
+        }
+    </script>
          <style>
             html{
                 overflow-x:hidden;
@@ -333,6 +338,22 @@ don’t worry about anyone finding it.</span>
     <script src="js/jquery.js"></script>
     <script src="js/jquery_code.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+    <script>
+        $(document).ready(function(){       
+            var navbar_scroll = 0;
+            var login_position = $('#login-card');
+            var offset = login_position.offset();
+                if (login_position.length){
+                    $(document).scroll(function() { 
+                        navbar_scroll = $(this).scrollTop();
+                        if((navbar_scroll+62) > offset.top) {
+                            $(".navbar").css('background-color', '#f0f0f0');
+                        } else {
+                            $('.navbar').css('background-color', 'rgba(0,0,0,0) !important');
+                        }
+                    });
+                }
+            });
+    </script>
 </body>
 </html>
