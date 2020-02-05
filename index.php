@@ -52,7 +52,7 @@
     <div class="cont1" style="min-height:700px;">
        <div class="container-fluid px-0">
        <!-- NAVBAR -->
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000;">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000; background-color:rgba(0,0,0,0) !important;">
                     <div class="container">
                         <a href="" class="navbar-brand">Studybooster</a>
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#NAVBAR">
@@ -118,8 +118,34 @@
             <div class="row">
                 <div class="col-md-6 pt-5 pl-4">
                     <h2 class="text-light main-title mb-4">Enhance Your Studies With Studybooster</h2>
+                    <?php
+                        if(!isset($_SESSION['role'])){
+                    ?>
                     <a href="php/login_page.php" class="heading-button1 mr-2">Log In</a>
                     <a href="user/features/signup.php" class="heading-button2 ml-2">Sign Up</a>
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['role'])){
+                            if($_SESSION['role'] == 'admin'){
+                    ?>
+                                <a href="admin/" class="heading-button1 mr-2">Admin Page</a>
+                                <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
+                    <?php
+                            }
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['role'])){
+                            if($_SESSION['role'] == 'admin'){
+                    ?>
+                                <a href="user/" class="heading-button1 mr-2">User Page</a>
+                                <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="col-md-6  d-none d-md-flex justify-content-md-end">
                     <div class="card text-center text-light col-md-12 col-lg-10" style="background-color:rgb(252,252,252);">
