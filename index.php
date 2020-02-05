@@ -116,7 +116,7 @@
        <!--Main content of header along with login-->
        <div class="container" style="padding-top:170px;">
             <div class="row">
-                <div class="col-md-6 pt-5">
+                <div class="col-md-6 pt-5 pl-4">
                     <h2 class="text-light main-title mb-4">Enhance Your Studies With Studybooster</h2>
                     <a href="php/login_page.php" class="heading-button1 mr-2">Log In</a>
                     <a href="user/features/signup.php" class="heading-button2 ml-2">Sign Up</a>
@@ -151,7 +151,19 @@
             html{
                 overflow-x:hidden;
             }
-            .logo{
+            header{
+                min-height:100vh; 
+                /* background-image: linear-gradient(to bottom, #ffa600a1, #ff812d); */
+                background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('imgs/header/header-min-min.jpg');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('css/img1/background.jpg');
+                background-attachment:fixed;
+                background-size: 1511.2px 824px;
+            }
+            body{
+                font-size:20px;
+                font-family: 'Roboto', sans-serif;
+            }
+                .logo{
                 height:130px; width:auto; float:left;
             }
                 .row1 input:focus{
@@ -163,10 +175,41 @@
                     font-size:86%;
                 }
                 .main-title{
-                    font-size:205%;
+                    font-size:200%;
                     color:#d5d5d5 !important;
                 }
-            
+                .heading-button1:link, .heading-button1:visited {
+                    padding: 8px 20px;
+                    border-radius: 5px;
+                    font-size: 90%;
+                    /* margin-top:15vh; */
+                    background-color:rgba(0,0,0,0);
+                    border:2px solid #ffb122;
+                    color: #ffb122;
+                    text-decoration: none;
+                    z-index: 2;
+                }
+                .heading-button1:hover, .heading-button1:active {
+                    background-color:#ffb122;
+                    color:#664200;
+                    transition: color 0.2s, background-color 0.2s;
+                }
+
+                .heading-button2:link, .heading-button2:visited {
+                    padding: 8px 20px;
+                    border-radius: 5px;
+                    font-size: 90%;
+                    background-color: #ffb122;
+                    border:2px solid #ffb122;
+                    color: #664200;
+                    text-decoration: none;
+                    z-index: 2;
+                }
+                .heading-button2:hover, .heading-button2:active {
+                    background-color:rgba(0,0,0,0);
+                    color:#ffb122;
+                    transition: color 0.2s, background-color 0.2s;
+                }
             </style>
     </header>
      <!----/****Features of webpage****/---->
