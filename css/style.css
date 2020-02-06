@@ -8,10 +8,6 @@
     -webkit-box-sizing:border-box;
             box-sizing:border-box;
 }
-body{
-    font-size:20px;
-    font-family: 'Roboto', sans-serif;
-}
 
 /************************************
 * Header *
@@ -21,7 +17,7 @@ header{
     min-height:100vh; 
     /* background-image: linear-gradient(to bottom, #ffa600a1, #ff812d); */
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('imgs/header/header-min-min.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imgs/header/signup-min2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img1/background.jpg');
     background-attachment:fixed;
     background-size: 1511.2px 824px;
 }
@@ -93,21 +89,6 @@ header{
     -webkit-animation-fill-mode: backwards;
             animation-fill-mode: backwards;
     z-index: 2;
-}
-.heading-button1:link, .heading-button1:visited {
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-size: 120%;
-    background-color:rgba(0,0,0,0);
-    border:2px solid #ffb122;
-    color: #ffb122;
-    text-decoration: none;
-    z-index: 2;
-}
-.heading-button1:hover, .heading-button:active {
-    background-color:#ffb122;
-    color:#664200;
-    transition: color 0.2s, background-color 0.2s;
 }
 
 /* login form */

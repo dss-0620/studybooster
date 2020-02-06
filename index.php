@@ -52,10 +52,10 @@
     <div class="cont1" style="min-height:700px;">
        <div class="container-fluid px-0">
        <!-- NAVBAR -->
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000;">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000; background-color:rgba(0,0,0,0) !important;">
                     <div class="container">
                         <a href="" class="navbar-brand">Studybooster</a>
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#NAVBAR">
+                        <button class="navbar-toggler" data-toggle="collapse" onclick="change()" data-target="#NAVBAR">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="NAVBAR">
@@ -113,52 +113,88 @@
            </div> -->
        </div>
 
-       <!--Main content of header-->
-       <div class="header-main-content1">
-           <h1 class="main-heading1 mb-3">Enhance Your Studies with studybooster</h1>
-          <?php
-          if(!isset($_SESSION['username'])){
-          echo '<div class="anim"><a href="user/features/signup.php" class="heading-button1" style="text-decoration:none;">Get started</a></div>';
-          }
-         else if($_SESSION['role'] == 'admin'){ 
-          echo '<div class="anim"><a href="admin/" class="heading-button1" style="text-decoration:none;">Admin Page</a></div>';
-           }
-         else if($_SESSION['role'] == 'user'){ 
-          echo '<div class="anim"><a href="user/" class="heading-button1" style="text-decoration:none;">User Page</a></div>';
-         }
-         ?>
-       </div>
-
-       <!--Login form in header-->
-       <!-- <form method="POST" action="php/login.php" class="login-form">
-            <div class="row1" id="underline1">
-                <p id="p1">Log In to your account</p>
-                <a href="index.php?action=close_login"><i class="icon ion-md-close icn1"></i></a>
+       <!--Main content of header along with login-->
+       <div class="container" style="padding-top:170px;">
+            <div class="row">
+                <div class="col-md-6 pt-5 pl-4">
+                    <h2 class="text-light main-title mb-4">Enhance Your Studies With Studybooster</h2>
+                    <?php
+                        if(!isset($_SESSION['role'])){
+                    ?>
+                    <a href="php/login_page.php" class="heading-button1 mr-2">Log In</a>
+                    <a href="user/features/signup.php" class="heading-button2 ml-2">Sign Up</a>
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['role'])){
+                            if($_SESSION['role'] == 'admin'){
+                    ?>
+                                <a href="admin/" class="heading-button1 mr-2">Admin Page</a>
+                                <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
+                    <?php
+                            }
+                        }
+                    ?>
+                    <?php
+                        if(isset($_SESSION['role'])){
+                            if($_SESSION['role'] == 'admin'){
+                    ?>
+                                <a href="user/" class="heading-button1 mr-2">User Page</a>
+                                <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
+                    <?php
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="col-md-6  d-none d-md-flex justify-content-md-end">
+                    <div class="card text-center text-light col-md-12 col-lg-10" style="background-color:rgb(252,252,252);">
+                        <div class="card-body" id="login-card">
+                            <h5 class="card-text mt-3 mb-5 text-dark">Log In</h3>
+                            <form action="php/login.php" class="form-group" method="POST">
+                                <div class="form-group input-group my-4">
+                                        <div class="input-group-prepend"><i class="icon ion-md-person input-group-text" style="font-size:1.2rem;"></i></div>
+                                    <input type="text" name="username" class="form-control" placeholder="Username / E-mail">
+                                </div>
+                                <div class="form-group input-group my-4">
+                                        <div class="input-group-prepend"><i class="icon ion-md-lock input-group-text" style="font-size:1.3rem;"></i></div>
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group mt-4 mb-4">
+                                    <input type="submit" value="Login Securely" class="btn btn-primary btn-block">
+                                </div>
+                                <div class="form-group mt-4" style="font-size:82%;">
+                                    <a href="forgot_password/">Forgot Password?</a> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="wrong1">
-                <p class="sign">Your E-mail or password is incorrect</p>
-            </div>
-            <div class="row1">
-                <input name="username" id="username" type="email" value="<?php echo $x; ?>" placeholder="E-mail" required>
-            </div>
-            <div class="row1">
-                <input name="password" id="password" type="password" placeholder="Password" required>
-            </div>
-            <div class="row1 row2 d-flex align-items-center">
-            <small><a href="forgot_password">Forgot password?</a></small> 
-            <input name="submit" value="Log In" type="submit" class="btn btn-primary mt-0" style="width:auto; margin-left:33%;">
-            </div>
-            <div class="row1">
-                <small id="sp">Don't have an account?</small>
-                <small><a href="user/php/signup.php">Create now</a></small>
-            </div>
-           </form> -->
+        </div>
     </div> 
+    <script>
+        function change(){
+            document.querySelector('.navbar').style.backgroundColor="#f0f0f0";
+        }
+    </script>
          <style>
             html{
                 overflow-x:hidden;
             }
-            .logo{
+            header{
+                min-height:100vh; 
+                /* background-image: linear-gradient(to bottom, #ffa600a1, #ff812d); */
+                background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('imgs/header/header-min-min.jpg');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('css/img1/background.jpg');
+                background-attachment:fixed;
+                background-size: 1511.2px 824px;
+            }
+            body{
+                font-size:20px;
+                font-family: 'Roboto', sans-serif;
+            }
+                .logo{
                 height:130px; width:auto; float:left;
             }
                 .row1 input:focus{
@@ -169,57 +205,41 @@
                 .wrong1{
                     font-size:86%;
                 }
-                @media only screen and (max-width:767px)
-                {
-                    .mobile-icon{
-                        display: inline-block;
-                        color:white;
-                    }
-                    .navi{
-                        display:none;
-                    }
-                    .but1:hover,.but1:active{
-                        color:#0b0;
-                        border:none;
-                    }
+                .main-title{
+                    font-size:200%;
+                    color:#d5d5d5 !important;
                 }
-                /*@media only screen and (max-width:400px)*/
-                /*{*/
-                /*    .login-form*/
-                /*    {*/
-                /*        width:97%;*/
-                /*    }*/
-                /*    .main-heading1{*/
-                /*        font-size: 150% !important;*/
-                /*    }*/
-                /*    .anim{*/
-                /*        font-size: 50% !important;*/
-                /*    }*/
-                /*}*/
-                @media only screen and (max-width:500px)
-                {
-                    .login-form
-                    {
-                        width:97%;
-                    }
-                    .main-heading1{
-                        font-size: 155% !important;
-                    }
-                    .anim{
-                        font-size: 70% !important;
-                    }
-                    .logo{
-                        height:90px; width:auto; float:left; margin-top:6px;
-                    }
-                    .mobile-icon{
-                        font-size:150%;
-                    }
+                .heading-button1:link, .heading-button1:visited {
+                    padding: 8px 20px;
+                    border-radius: 5px;
+                    font-size: 90%;
+                    /* margin-top:15vh; */
+                    background-color:rgba(0,0,0,0);
+                    border:2px solid #ffb122;
+                    color: #ffb122;
+                    text-decoration: none;
+                    z-index: 2;
                 }
-                @media only screen and (max-width:400px)
-                {
-                    body{
-                        font-size:17px;
-                    }
+                .heading-button1:hover, .heading-button1:active {
+                    background-color:#ffb122;
+                    color:#664200;
+                    transition: color 0.2s, background-color 0.2s;
+                }
+
+                .heading-button2:link, .heading-button2:visited {
+                    padding: 8px 20px;
+                    border-radius: 5px;
+                    font-size: 90%;
+                    background-color: #ffb122;
+                    border:2px solid #ffb122;
+                    color: #664200;
+                    text-decoration: none;
+                    z-index: 2;
+                }
+                .heading-button2:hover, .heading-button2:active {
+                    background-color:rgba(0,0,0,0);
+                    color:#ffb122;
+                    transition: color 0.2s, background-color 0.2s;
                 }
             </style>
     </header>
@@ -318,6 +338,22 @@ don’t worry about anyone finding it.</span>
     <script src="js/jquery.js"></script>
     <script src="js/jquery_code.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+    <script>
+        $(document).ready(function(){       
+            var navbar_scroll = 0;
+            var login_position = $('#login-card');
+            var offset = login_position.offset();
+                if (login_position.length){
+                    $(document).scroll(function() { 
+                        navbar_scroll = $(this).scrollTop();
+                        if((navbar_scroll+62) > offset.top) {
+                            $(".navbar").css('background-color', '#f0f0f0');
+                        } else {
+                            $('.navbar').css('background-color', 'rgba(0,0,0,0) !important');
+                        }
+                    });
+                }
+            });
+    </script>
 </body>
 </html>
