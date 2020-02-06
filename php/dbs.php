@@ -1,15 +1,15 @@
 <?php 
-   $connection = mysqli_connect('localhost','studybooster_db1','wi03GP+CmsN@','studybooster_getresult');
-   //$connection = mysqli_connect('localhost','root','','getresult');
+   //$connection = mysqli_connect('localhost','studybooster_db1','wi03GP+CmsN@','studybooster_getresult');
+   $connection = mysqli_connect('localhost','root','','getresult');
 ?>
 <?php 
-   $result_connection = mysqli_connect('localhost','studybooster_db2','^}9%t2Ftk?Wt','studybooster_getresult_results');
-   //$result_connection = mysqli_connect('localhost','root','','getresult_result');
+   //$result_connection = mysqli_connect('localhost','studybooster_db2','^}9%t2Ftk?Wt','studybooster_getresult_results');
+   $result_connection = mysqli_connect('localhost','root','','getresult_result');
 ?>
 <?php 
-   $relative_connection = mysqli_connect('localhost','relative_user','5tO!1j1%cRz','relative_est_secure_ssl');
-   $relative_user_connection = mysqli_connect('localhost','relative_select','yqwie891273yqwiu','relative_est_secure_ssl');
-   //$relative_connection = mysqli_connect('localhost','root','','relative_est_secure_ssl');
+   //$relative_connection = mysqli_connect('localhost','relative_user','5tO!1j1%cRz','relative_est_secure_ssl');
+   //$relative_user_connection = mysqli_connect('localhost','relative_select','yqwie891273yqwiu','relative_est_secure_ssl');
+   $relative_connection = mysqli_connect('localhost','root','','relative_est_secure_ssl');
 ?>
 <?php 
  function check_query($result_of_query)

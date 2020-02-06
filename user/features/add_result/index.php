@@ -197,51 +197,51 @@
 
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Class Test'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' max='30' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' min='0' max='30' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Drawing Sheets'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 50)' id='input-1' name='{$sub_comp_counter}' max='50' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 50)' id='input-1' name='{$sub_comp_counter}' min='0' max='50' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Sketch Book'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 20)' id='input-1' name='{$sub_comp_counter}' max='20' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 20)' id='input-1' name='{$sub_comp_counter}' min='0' max='20' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'AutoCAD Sketch'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' max='30' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' min='0' max='30' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Class test'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>Class Test</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 20)' id='input-1' name='{$sub_comp_counter}' max='20' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 20)' id='input-1' name='{$sub_comp_counter}' min='0' max='20' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Sessional Exam'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 40)' id='input-1' name='{$sub_comp_counter}' max='40' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 40)' id='input-1' name='{$sub_comp_counter}' min='0' max='40' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Tutorial'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 60)' id='input-1' name='{$sub_comp_counter}' max='60' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 60)' id='input-1' name='{$sub_comp_counter}' min='0' max='60' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Tutorial / Assignment / Test'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' max='30' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 30)' id='input-1' name='{$sub_comp_counter}' min='0' max='30' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Term Assignment'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 60)' id='input-1' name='{$sub_comp_counter}' max='60' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 60)' id='input-1' name='{$sub_comp_counter}' min='0' max='60' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Lab File'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 75)' id='input-1' name='{$sub_comp_counter}' max='75' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 75)' id='input-1' name='{$sub_comp_counter}' min='0' max='75' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'Viva'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 25)' id='input-1' name='{$sub_comp_counter}' max='25' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 25)' id='input-1' name='{$sub_comp_counter}' min='0' max='25' required><div>";
                                             }
                                             if($sbcmp[$i]->getSubcomponents_name() == 'SEE'){
                                                 echo "<div class='form-group my-2'><label for='input-1' class='disp2 my-1 ml-md-1'>{$sbcmp[$i]->getSubcomponents_name()}</label>
-                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 100)' id='input-1' name='{$sub_comp_counter}' max='100' required><div>";
+                                                <input type='number' class='form-control {$sbcmp[$i]->getSubcomponents_name()} d-inline-block' style='display:inline-block;' placeholder='Estimated marks (out of 100)' id='input-1' name='{$sub_comp_counter}' min='0' max='100' required><div>";
                                             }
                                          $sub_comp_counter++;
                                     }
