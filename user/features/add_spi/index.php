@@ -10,6 +10,11 @@
         }
     }
 ?>
+<?php 
+    if(isset($_POST['content'])){
+        
+    }
+?>
                         <div class="row">
                             <div class="alert alert-primary mt-3 ml-4">
                                 <strong>Add your S.P.I. of each semester to predict your P.P.I. of all semester including this semester </strong>
