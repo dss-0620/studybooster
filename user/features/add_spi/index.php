@@ -10,6 +10,9 @@
         }
     }
 ?>
+<?php
+    $sem_array = [1=>'One',2=>'Two',3=>'Three',4=>'Four',5=>'Five',6=>'Six'];
+?>
 <?php 
     if(isset($_POST['content'])){
         
@@ -40,10 +43,14 @@
                                 </form>
                             <?php } ?>
                             <?php if(isset($_POST['submit'])){ ?>
-                                <?php if($option_value == 'ppi'){ ?>
+                                <?php if($option_value == 'ppi'){ 
+                                    $sem_id = $_SESSION['user_semester_id'];
+                                    $num = $sem_array[$sem_id-1];
+                                    $placholder_string = "Enter your P.P.I. of first ".$num." semesters";   
+                                ?>
                                     <form action="" method="post" class="form-group">
                                         <div class="form-group">
-                                            <input type="number" step="any" class="form-control" placeholder="Enter your current P.P.I." name="ppi">
+                                            <input type="number" step="any" class="form-control" placeholder="<?php echo $placholder_string; ?>" name="ppi">
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" id="text" name="content" class="btn btn-primary form-control" value="Save">
@@ -62,10 +69,11 @@
                                                 $sem = $semester_row['semester_id'];
                                                 $sem_name = $semester_row['semester_name'];
                                                 $name = 'spi'.$sem;
+                                                $spi_placeholder_string = "Enter S.P.I. of ".$sem_name." sem";
                                         ?>
                                         <div class="form-group">
                                             <label for="spi"><?php echo $sem_name; ?></label>
-                                            <input type="number" id="spi" step="any" class="form-control" name="<?php echo $name; ?>" placeholder="Enter S.P.I." max="10" min="4">
+                                            <input type="number" id="spi" step="any" class="form-control" name="<?php echo $name; ?>" placeholder="<?php echo $spi_placeholder_string; ?>" max="10" min="4">
                                         </div>
                                         <?php } ?>
                                         <div class="form-group">
