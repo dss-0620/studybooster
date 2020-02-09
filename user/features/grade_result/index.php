@@ -1,19 +1,6 @@
 <?php include "../header.php" ?>
 <?php include "../navigation.php" ?>
 <?php 
-    // for profile
-    // $query_ppi = "SELECT total,total_credits FROM grade_pointers WHERE student_id = {$_SESSION['user_id']} ";
-    // $query_ppi_result = mysqli_query($result_connection,$query_ppi);
-    // check_query1($query_ppi);
-    // $total = 0;
-    // $credits = 0;
-    // while($row_ppi = mysqli_fetch_assoc($query_ppi_result))
-    // {
-    //     $total += $row_ppi['total'];
-    //     $credits += $row_ppi['total_credits'];
-    // }
-    // $ppi = round(($total/$credits),3);
-    // echo $ppi;
     function number($var){
         switch($var){
             case 1:

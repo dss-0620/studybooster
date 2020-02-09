@@ -203,7 +203,7 @@
                                
                           </tbody>
                         </table>
-                        <input type="submit" title="Save Changes" value="Save Changes" name="submit" class="btn btn-primary mb-2"> 
+                        <input type="submit" title="Save Changes" value="Save Changes" name="submit" class="btn btn-primary ml-3 mb-5"> 
                       </form>
                     </div>
                     </div>
@@ -224,9 +224,9 @@
             for($i=0; $i<7; $i++){
                 $form_array[$i] = $_POST[$i];
             }
-            if($form_array[3] > 2){
-                $form_array[4] = '';
-            }
+            // if($form_array[3] > 2){
+            //     $form_array[4] = '';
+            // }
             if($_SESSION['user_semester_id'] != $form_array[3])
                 include "../delete.php";
             else if($_SESSION['user_branch_id'] != $form_array[5])
