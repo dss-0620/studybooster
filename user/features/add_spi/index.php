@@ -11,6 +11,53 @@
     }
 ?>
 <?php
+    function check_credit(){
+        $branch_id = $_SESSION['user_branch_id'];
+        $sem_id = $_SESSION['user_semester_id'];
+        $select_credits = "SELECT * FROM stored_credits WHERE credit_branch_id = $branch_id AND credit_sem_id = $sem_id";
+        $select_credits_result = mysqli_query($relative_connection,$select_credits);
+        if(!$select_credits_result)
+            die('SELECT CREDITS FAILED!');
+        $num = mysqli_num_rows($select_credits_result);
+        if($num)
+            return $select_credits_result;
+        else
+            return false;
+    }
+?>
+<?php
+    if(isset($_POST['content'])){
+        if(isset($_POST['ppi'])){
+            $select_credits = check_credit();
+            if($select_credits_result == false){
+                $total_credits=35;
+                $branch_id = $_SESSION['user_branch_id'];
+                $sem_id = $_SESSION['user_semester_id'];
+                $select_credit = "SELECT subject_credit FROM subjects WHERE semester_id = $sem_id AND branch_id = $branch_id";
+                $select_credit_result = mysqli_query($connection,$select_credit);
+                if(!$select_credit_result)
+                    die('CREDIT SELECTION FAILED!');
+                $sem_credits=0;
+                while($row = mysqli_fetch_assoc($select_credit_result)){
+                    $credit = $row['subject_credit'];
+                    $sem_credits+=$credit;
+                }
+                $insert_query = "INSERT INTO stored_credits(credit_branch_id,credit_sem_id,credit_val) VALUES($branch_id,$sem_id,$sem_credits)";
+                $insert_query_result = mysqli_query($relative_connection,$insert_query);
+                if(!$insert_query_result)
+                    die('STORED CREDIT RESULT FAILED!');
+                $user_id = $_SESSION['user_id'];
+                $ppi = $_POST['ppi'];
+                $total_credits+=$sem_credits;
+                $insert_ppi = "INSERT INTO ppi_spi_secure(ppi_val,ppi_sem,ppi_credits,user_id) VALUES($ppi,0,$total_credits,$user_id)";
+                $insert_ppi_result = mysqli_query($relative_connection,$insert_ppi);
+                if(!$insert_ppi_result)
+                    die('INSERT PPI FAILED!');
+            }
+        }
+    }
+?>
+<?php
     $sem_array = [1=>'One',2=>'Two',3=>'Three',4=>'Four',5=>'Five',6=>'Six'];
 ?>
 <?php 
