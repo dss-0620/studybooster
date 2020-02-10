@@ -11,48 +11,105 @@
     }
 ?>
 <?php
-    function check_credit(){
+    function check_credit($sem_id){
+        global $relative_connection;
         $branch_id = $_SESSION['user_branch_id'];
-        $sem_id = $_SESSION['user_semester_id'];
         $select_credits = "SELECT * FROM stored_credits WHERE credit_branch_id = $branch_id AND credit_sem_id = $sem_id";
         $select_credits_result = mysqli_query($relative_connection,$select_credits);
         if(!$select_credits_result)
-            die('SELECT CREDITS FAILED!');
+            die('SELECT CREDITS FAILED!'.mysqli_error($relative_connection));
         $num = mysqli_num_rows($select_credits_result);
         if($num)
             return $select_credits_result;
         else
             return false;
     }
+    function insert_ppi($sem,$total_credits,$ppi){
+        global $relative_connection;
+        $user_id = $_SESSION['user_id'];
+        $insert_ppi = "INSERT INTO ppi_spi_secure(ppi_val,ppi_sem,ppi_credits,user_id) VALUES($ppi,$sem,$total_credits,$user_id)";
+        $insert_ppi_result = mysqli_query($relative_connection,$insert_ppi);
+        if(!$insert_ppi_result)
+            die('INSERT PPI FAILED!'.mysqli_error($relative_connection));
+    }
+    function extract_credits($sem_id){
+        global $connection;
+        global $relative_connection;
+        $branch_id = $_SESSION['user_branch_id'];
+        $select_credit = "SELECT subject_credit FROM subjects WHERE semester_id = $sem_id AND branch_id = $branch_id";
+        $select_credit_result = mysqli_query($connection,$select_credit);
+        if(!$select_credit_result)
+            die('CREDIT SELECTION FAILED!');
+        $sem_credits=0;
+        while($row = mysqli_fetch_assoc($select_credit_result)){
+            $credit = $row['subject_credit'];
+            $sem_credits+=$credit;
+        }
+        $insert_query = "INSERT INTO stored_credits(credit_branch_id,credit_sem_id,credit_val) VALUES($branch_id,$sem_id,$sem_credits)";
+        $insert_query_result = mysqli_query($relative_connection,$insert_query);
+        if(!$insert_query_result)
+            die('STORED CREDIT RESULT FAILED!');
+        return $sem_credits;
+    }
 ?>
 <?php
     if(isset($_POST['content'])){
+        $branch_id = $_SESSION['user_branch_id'];
+        $sem_id = $_SESSION['user_semester_id'];
         if(isset($_POST['ppi'])){
-            $select_credits = check_credit();
-            if($select_credits_result == false){
+            $ppi = $_POST['ppi'];
+            $select_credits = check_credit($sem_id-1);
+            if($select_credits == false){
                 $total_credits=35;
-                $branch_id = $_SESSION['user_branch_id'];
-                $sem_id = $_SESSION['user_semester_id'];
-                $select_credit = "SELECT subject_credit FROM subjects WHERE semester_id = $sem_id AND branch_id = $branch_id";
-                $select_credit_result = mysqli_query($connection,$select_credit);
-                if(!$select_credit_result)
-                    die('CREDIT SELECTION FAILED!');
-                $sem_credits=0;
-                while($row = mysqli_fetch_assoc($select_credit_result)){
-                    $credit = $row['subject_credit'];
-                    $sem_credits+=$credit;
-                }
-                $insert_query = "INSERT INTO stored_credits(credit_branch_id,credit_sem_id,credit_val) VALUES($branch_id,$sem_id,$sem_credits)";
-                $insert_query_result = mysqli_query($relative_connection,$insert_query);
-                if(!$insert_query_result)
-                    die('STORED CREDIT RESULT FAILED!');
-                $user_id = $_SESSION['user_id'];
-                $ppi = $_POST['ppi'];
+                $sem_credits = extract_credits($sem_id-1);
                 $total_credits+=$sem_credits;
-                $insert_ppi = "INSERT INTO ppi_spi_secure(ppi_val,ppi_sem,ppi_credits,user_id) VALUES($ppi,0,$total_credits,$user_id)";
-                $insert_ppi_result = mysqli_query($relative_connection,$insert_ppi);
-                if(!$insert_ppi_result)
-                    die('INSERT PPI FAILED!');
+            }
+            else{
+                $total_credits = 35;
+                while($rows = mysqli_fetch_assoc($select_credits)){
+                    $total_credits+=$rows['credit_val'];
+                }
+            }
+            insert_ppi(0,$total_credits,$ppi);
+        }
+        else if(isset($_POST['spi1'])){
+            $group = $_POST['group_id'];
+            $update_user_group = "UPDATE users SET user_group = $group WHERE user_id = {$_SESSION['user_id']}";
+            $update_user_group_result = mysqli_query($connection,$update_user_group);
+            if(!$update_user_group)
+                die('GROUP FAILED!');
+            $counter = $_POST['counter'];
+            for($i=1;$i<=$counter;$i++){
+                $spi = $_POST['spi'.$i];
+                if($i == 1){
+                    if($group == 1){
+                        insert_ppi($i,19,$spi);
+                    }
+                    else{
+                        insert_ppi($i,15,$spi);
+                    }
+                }
+                else if($i==2){
+                    if($group == 1){
+                        insert_ppi($i,16,$spi);
+                    }
+                    else{
+                        insert_ppi($i,20,$spi);
+                    }  
+                }
+                else{
+                    $get_credit = check_credit($i);
+                    if($get_credit == false){
+                        $sem_credits = extract_credits($i);
+                    }
+                    else{
+                        $sem_credits=0;
+                        while($rows = mysqli_fetch_assoc($get_credit)){
+                            $sem_credits += $rows['credit_val'];
+                        }
+                    }
+                    insert_ppi($i,$sem_credits,$spi);
+                }
             }
         }
     }
@@ -128,6 +185,7 @@
                                             <input type="number" id="spi" step="any" class="form-control" name="<?php echo $name; ?>" placeholder="<?php echo $spi_placeholder_string; ?>" max="10" min="4">
                                         </div>
                                         <?php } ?>
+                                        <input type="number" name="counter" value="<?php echo $sem; ?>" hidden required>
                                         <div class="form-group">
                                             <input type="submit" id="text" name="content" class="btn btn-primary form-control" value="Save">
                                         </div>

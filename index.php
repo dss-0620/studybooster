@@ -138,7 +138,7 @@
                     ?>
                     <?php
                         if(isset($_SESSION['role'])){
-                            if($_SESSION['role'] == 'admin'){
+                            if($_SESSION['role'] == 'user'){
                     ?>
                                 <a href="user/" class="heading-button1 mr-2">User Page</a>
                                 <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
@@ -154,11 +154,11 @@
                             <form action="php/login.php" class="form-group" method="POST">
                                 <div class="form-group input-group my-4">
                                         <div class="input-group-prepend"><i class="icon ion-md-person input-group-text" style="font-size:1.2rem;"></i></div>
-                                    <input type="text" name="username" class="form-control" placeholder="Username / E-mail">
+                                    <input type="text" name="username" class="form-control" placeholder="Username / E-mail" required>
                                 </div>
                                 <div class="form-group input-group my-4">
                                         <div class="input-group-prepend"><i class="icon ion-md-lock input-group-text" style="font-size:1.3rem;"></i></div>
-                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                                 </div>
                                 <div class="form-group mt-4 mb-4">
                                     <input type="submit" value="Login Securely" class="btn btn-primary btn-block">
