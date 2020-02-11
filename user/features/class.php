@@ -330,6 +330,18 @@ function name($var){
             return 'SEE';
     }
 }
+function ppi_exists(){
+    global $relative_connection;
+    $check_query = "SELECT * FROM ppi_spi_secure WHERE user_id = {$_SESSION['user_id']}";
+    $check_query_result = mysqli_query($relative_connection,$check_query);
+    if(!$check_query_result)
+        die('CHECK PPI QUERY FAILED!');
+    $num = mysqli_num_rows($check_query_result);
+    if($num==0)
+        return false;
+    else
+        return $check_query_result;
+}
 function revert_name($var){
     switch($var){
         case 'CT':

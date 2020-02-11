@@ -117,10 +117,9 @@
 <?php
     $sem_array = [1=>'One',2=>'Two',3=>'Three',4=>'Four',5=>'Five',6=>'Six'];
 ?>
-<?php 
-    if(isset($_POST['content'])){
-        
-    }
+<?php
+    $ppi_data = ppi_exists();
+    if($ppi_data == false){
 ?>
                         <div class="row">
                             <div class="alert alert-primary mt-3 ml-4">
@@ -192,7 +191,40 @@
                                     </form>
                                 <?php } ?>
                             <?php } ?>
+                        <?php } ?>
+<?php 
+    if($ppi_data != false){
+?>
+                    <div class="row">
+                            <div class="col-10 col-sm-8 col-md-6 mt-4 ml-4">
+                                <div class="wrong1 mb-4" style="padding-left: 20px;">
+                                <i class="far fa-check-circle mr-2 icn-typ1"></i>Thanks for your valuable feedback
                             </div>
+                                <form action="" method="post" class="form-group">
+                                    <?php 
+                                        $ppi_sem = [0=>'P.P.I.',1=>'S.P.I. of First Sem',2=>'S.P.I. of Second Sem',3=>'S.P.I. of Third Sem',1=>'S.P.I. of Fourth Sem'];
+                                        while($ppi_row = mysqli_fetch_assoc($ppi_data)){
+                                            $semester_name = $ppi_sem[$ppi_row['ppi_sem']];
+                                            $placeholder = "Enter ".$semester_name;
+                                            $value = $ppi_sem['ppi_val'];
+                                            if($ppi_row['ppi_sem'] == 0)
+                                                $name = 'ppi';
+                                            else
+                                                $name = 'spi'.$ppi_row['ppi_sem'];
+                                    ?>
+                                        <div class="form-group">
+                                            <label for="ppi"></label>
+                                            <input type="text" id="ppi" name = "<?php echo $name; ?>" value="<?php $value; ?>" class="form-control" placeholder="<?php echo $placeholder; ?>" step="any" min="4" max="10" required>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="form-group">
+                                        <label for="text"></label>
+                                        <input type="submit" id="text" name="submit" class="btn btn-primary form-control" value="Send it">
+                                    </div>
+                                </form>
+                    </div>
+<?php } ?>
+                        </div>
                         </div>
                     </div>
                     </div>
