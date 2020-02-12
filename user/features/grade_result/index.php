@@ -50,12 +50,6 @@
                         <?php
                             if(!isset($_GET['show_spi'])){
                         ?>
-                        <?php if($user_id == 2){ ?>
-                            <div class="alert alert-warning mt-3">
-                                <strong>We are extremly Sorry for wrong S.P.I. calculation(By Grades not Marks) by our system. Please recalculate your S.P.I. using grades. Ignore if already recalculated.</strong>
-                                <a href="features/profile">Click Here to change semester</a>
-                            </div>
-                        <?php } ?>
                         <form action="" method = "post" class="col-xs-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 form-group">
                                 <select name="semester" class="form-control" id="sem_id" onchange="check()">
                                     <?php
@@ -85,11 +79,9 @@
                             function check(){
                                 var sem_val = document.getElementById('sem_id').value;
                                 if(sem_val == "null"){
-                                    //console.log("HELLO!!!");
                                     document.getElementById('sem_sub').disabled=true;
                                 }
                                 else{
-                                    //console.log("HELLO");
                                     document.getElementById('sem_sub').disabled=false;
                                 }
                             }
