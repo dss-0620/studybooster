@@ -235,10 +235,10 @@
                                             <input type="text" id="ppi" name = "<?php echo $name; ?>" value="<?php echo $value; ?>" class="form-control" placeholder="<?php echo $placeholder; ?>" step="any" min="4" max="10" disabled required>
                                         </div>
                                     <?php } ?>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="text"></label>
                                         <input type="submit" id="text" name="modify" class="btn btn-primary form-control" value="Save Changes">
-                                    </div>
+                                    </div> -->
                                 </form>
                                 <form action="" method="post">
                                     <input type="text" name="data" value="true" hidden>

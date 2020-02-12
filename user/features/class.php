@@ -39,6 +39,7 @@
         $this->result_id = 0;
         $this->subject_count = 0;
         $this->spi = 0;
+        $this->ppi=0;
     }
     public function getResult_id(){
         return $this->result_id;
@@ -330,6 +331,14 @@ function name($var){
             return 'SEE';
     }
 }
+function cal_ppi(){
+    global $relative_connection;
+    $select_ppi_query = "SELECT ppi_val,ppi_credits FROM ppi_spi_secure WHERE user_id = {$_SESSION['user_id']}";
+    $select_ppi_query_result = mysqli_query($relative_connection,$select_ppi_query);
+    if(!$select_ppi_query_result)
+        die('PPI QUERY FAILED!');
+    return $select_ppi_query_result;
+}
 function ppi_exists(){
     global $relative_connection;
     $check_query = "SELECT * FROM ppi_spi_secure WHERE user_id = {$_SESSION['user_id']}";
@@ -337,7 +346,7 @@ function ppi_exists(){
     if(!$check_query_result)
         die('CHECK PPI QUERY FAILED!');
     $num = mysqli_num_rows($check_query_result);
-    if($num==0)
+    if($num == 0)
         return false;
     else
         return $check_query_result;
@@ -386,123 +395,12 @@ function comp_name($var){
             return 'SEE Component';
     }
 }
-// function subject_name($var){
-//     switch($var){
-//         case 'Discrete Mathematics':
-//             return 'DM';
-//         case 'Data Communication':
-//             return 'DC';
-//         case 'Digital Electronics':
-//             return 'DE';
-//         case 'Object Oriented Programming':
-//             return 'OOP';
-//         case 'Data Structures & F.S.':
-//             return 'DS';
-//         case 'Web Technologies':
-//             return 'WT';
-//         case 'Probability and Stats.':
-//             return 'PS';
-//         case 'Computer Organisation':
-//             return 'CO';
-//         case 'Operating Systems':
-//             return 'OS';
-//         case 'Computer Networks':
-//             return 'CN';
-//         case 'Database Management Systems':
-//             return 'DBMS';
-//         case 'Economics':
-//             return 'ECS';
-//         case 'Software Engineering':
-//             return 'SE';
-//         case 'Design & Analysis of Algo.':
-//             return 'ALG';
-//         case 'Theory of Computation':
-//             return 'TC';
-//         case 'Microprocessor & Interfacing':
-//             return 'MI';
-//         case 'Computer Security':
-//             return 'CS';
-//         case 'Institute Elective 1':
-//             return 'IE1';
-//         case 'Artificial Intelligence':
-//             return 'AI';
-//         case 'Dept. Elect. 1':
-//             return 'DE1';    
-//         case 'Dept. Elect. 2':
-//             return 'DE2';
-//         case 'Dept. Elect. 3':
-//             return 'DE3';
-//         case 'University Elect.':
-//             return 'UE';
-//         case 'Database App. Development':
-//             return 'DBAD';
-//         case 'Minor Project':
-//             return 'MP';
-//         case 'Organisational Behaviour':
-//             return 'OB';
-//     }
-// }
-// function subject_name_revert($var){
-//     switch($var){
-//         case 'DM':
-//             return 'Discrete Mathematics';
-//         case 'DC':
-//             return 'Data Communication';
-//         case 'DE':
-//             return 'Digital Electronics';
-//         case 'OOP':
-//             return 'Object Oriented Programming';
-//         case 'DS':
-//             return 'Data Structures & F.S.';
-//         case 'WT':
-//             return 'Web Technologies';
-//         case 'PS':
-//             return 'Probability and Stats.';
-//         case 'CO':
-//             return 'Computer Organisation';
-//         case 'OS':
-//             return 'Operating Systems';
-//         case 'CN':
-//             return 'Computer Networks';
-//         case 'DBMS':
-//             return 'Database Management Systems';
-//         case 'ECS':
-//             return 'Economics';
-//         case 'SE':
-//             return 'Software Engineering';
-//         case 'ALG':
-//             return 'Design & Analysis of Algo.';
-//         case 'TC':
-//             return 'Theory of Computation';
-//         case 'MI':
-//             return 'Microprocessor & Interfacing';
-//         case 'CS':
-//             return 'Computer Security';
-//         case 'IE1':
-//             return 'Institute Elective 1';
-//         case 'AI':
-//             return 'Artificial Intelligence';
-//         case 'DE1':
-//             return 'Dept. Elect. 1';    
-//         case 'DE2':
-//             return 'Dept. Elect. 2';
-//         case 'DE3':
-//             return 'Dept. Elect. 3';
-//         case 'UE':
-//             return 'University Elect.';
-//         case 'DBAD':
-//             return 'Database App. Development';
-//         case 'MP':
-//             return 'Minor Project';
-//         case 'OB':
-//             return 'Organisational Behaviour';
-//     }
-//}
 class Result2{
     var $result_id;
     var $subject_count;
     var $subject;
     var $spi;
+    var $ppi;
     public function __construct(){
         $this->subject = array();
         $this->result_id = 0;
@@ -536,6 +434,20 @@ class Result2{
             $total_credits += ($this->subject[$i])->getCredit();
         }
         $this->spi = round($total/$total_credits,3);
+    }
+    public function getPPI(){
+        return $this->ppi;
+    }
+    public function calculatePPI($grade_points,$credits){
+        $total = 0;
+        $total_credits = 0;
+        for($i=0; $i<($this->subject_count); $i++){
+            $total += returnGrade(($this->subject[$i])->getTotal()) * (($this->subject[$i])->getCredit());
+            $total_credits += ($this->subject[$i])->getCredit();
+        }
+        $grade_points+=$total;
+        $credits+=$total_credits;
+        $this->ppi = round(($grade_points/$credits),3);
     }
 }
 class Subject2{
