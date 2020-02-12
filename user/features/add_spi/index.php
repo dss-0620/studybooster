@@ -51,6 +51,23 @@
             die('STORED CREDIT RESULT FAILED!');
         return $sem_credits;
     }
+    function delete_ppi(){
+        global $relative_connection;
+        $delete_ppi = "DELETE FROM ppi_spi_secure WHERE user_id = {$_SESSION['user_id']}";
+        $delete_ppi_result = mysqli_query($relative_connection,$delete_ppi);
+        if(!$delete_ppi_result)
+            die('DELETE PPI QUERY FAILED!'.mysqli_error($delete_ppi_result));
+    }
+    function modify_ppi(){
+
+    }
+?>
+<?php 
+    if(isset($_POST['delete_ppi'])){
+        if($_POST['data'] == 'true')
+            delete_ppi();
+        header('Location: ./');
+    }
 ?>
 <?php
     if(isset($_POST['content'])){
@@ -112,6 +129,7 @@
                 }
             }
         }
+        header('Location: ./');
     }
 ?>
 <?php
@@ -202,11 +220,11 @@
                             </div>
                                 <form action="" method="post" class="form-group">
                                     <?php 
-                                        $ppi_sem = [0=>'P.P.I.',1=>'S.P.I. of First Sem',2=>'S.P.I. of Second Sem',3=>'S.P.I. of Third Sem',1=>'S.P.I. of Fourth Sem'];
+                                        $ppi_sem = [0=>'P.P.I.',1=>'S.P.I. of First Sem',2=>'S.P.I. of Second Sem',3=>'S.P.I. of Third Sem',4=>'S.P.I. of Fourth Sem'];
                                         while($ppi_row = mysqli_fetch_assoc($ppi_data)){
                                             $semester_name = $ppi_sem[$ppi_row['ppi_sem']];
                                             $placeholder = "Enter ".$semester_name;
-                                            $value = $ppi_sem['ppi_val'];
+                                            $value = $ppi_row['ppi_val'];
                                             if($ppi_row['ppi_sem'] == 0)
                                                 $name = 'ppi';
                                             else
@@ -214,13 +232,17 @@
                                     ?>
                                         <div class="form-group">
                                             <label for="ppi"></label>
-                                            <input type="text" id="ppi" name = "<?php echo $name; ?>" value="<?php $value; ?>" class="form-control" placeholder="<?php echo $placeholder; ?>" step="any" min="4" max="10" required>
+                                            <input type="text" id="ppi" name = "<?php echo $name; ?>" value="<?php echo $value; ?>" class="form-control" placeholder="<?php echo $placeholder; ?>" step="any" min="4" max="10" disabled required>
                                         </div>
                                     <?php } ?>
                                     <div class="form-group">
                                         <label for="text"></label>
-                                        <input type="submit" id="text" name="submit" class="btn btn-primary form-control" value="Send it">
+                                        <input type="submit" id="text" name="modify" class="btn btn-primary form-control" value="Save Changes">
                                     </div>
+                                </form>
+                                <form action="" method="post">
+                                    <input type="text" name="data" value="true" hidden>
+                                    <input type="submit" name="delete_ppi" class="btn btn-danger" value="Delete Data">
                                 </form>
                     </div>
 <?php } ?>
