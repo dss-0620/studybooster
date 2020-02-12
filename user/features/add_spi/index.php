@@ -93,6 +93,7 @@
             $group = $_POST['group_id'];
             $update_user_group = "UPDATE users SET user_group = $group WHERE user_id = {$_SESSION['user_id']}";
             $update_user_group_result = mysqli_query($connection,$update_user_group);
+            $_SESSION['user_group'] = $group;
             if(!$update_user_group)
                 die('GROUP FAILED!');
             $counter = $_POST['counter'];
