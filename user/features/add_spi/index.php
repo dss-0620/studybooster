@@ -171,7 +171,7 @@
                                 ?>
                                     <form action="" method="post" class="form-group">
                                         <div class="form-group">
-                                            <input type="number" step="any" class="form-control" placeholder="<?php echo $placholder_string; ?>" name="ppi">
+                                            <input type="number" step="any" class="form-control" placeholder="<?php echo $placholder_string; ?>" name="ppi" max="10" min="4">
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" id="text" name="content" class="btn btn-primary form-control" value="Save">
