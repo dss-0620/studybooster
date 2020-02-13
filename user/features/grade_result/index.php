@@ -27,11 +27,28 @@
                                 Congratulations!
                             </div>
                         </div>
-                        <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                       <?php if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()!=false){?>
+                        `<div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
                             <div class="col-10">
-                                You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
+                                You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><?php echo $_SESSION['ppi'] ?></span> P.P.I.
                             </div>
-                        </div>
+                        </div>`
+                        <?php }
+                        else if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()==false){ ?>
+                            <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                                <div class="col-10">
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><a href='../add_spi'><i class='far fa-question-circle' style='font-size:22px;'></i></a></span> P.P.I.
+                                </div>
+                            </div>
+                        <?php } 
+                        else{
+                        ?>
+                            <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                                <div class="col-10">
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
+                                </div>
+                            </div>`
+                        <?php } ?>
                         <div class="row mx-2 mx-md-5 mt-3 p-1" style="font-weight:370; font-size:130%; border:1px solid black;">
                             <div class="col-11">
                                 Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet,
@@ -61,7 +78,6 @@
                                     echo '<option value="null" selected disabled hidden>Select Semester</option>';
                                 }
                             ?>
-                                <!--<option value="null" selected disabled hidden>Select Semester</option>-->
                                     <?php 
                                             $query = "SELECT * FROM semester WHERE semester_id <= {$_SESSION['user_semester_id']}";
                                             $result = mysqli_query($connection,$query);
@@ -200,6 +216,7 @@
         if(isset($_POST['submit'])){
             $sum = 0;
             $credit_total = 0;
+            $_SESSION['check_semester'] = $_POST['semester'];
             if($_POST['semester'] == 1)
             { 
                 if($_SESSION['user_group'] == 1){
@@ -252,8 +269,19 @@
             }
           $pointers = $sum/$credit_total;
           $pointers = round($pointers,3);
-          if($_SESSION['user_semester_id'] == $_POST['semester']){
-              //CONTINUE FROM HERE
+          if($_SESSION['user_semester_id'] == $_POST['semester'] && ppi_exists()!=false){
+              $ppi_data = cal_ppi();
+              $total_credits=0;
+              $total_grade_points = 0;
+              while($row = mysqli_fetch_assoc($ppi_data)){
+                    $total_credits += $row['ppi_credits'];
+                    $total_grade_points += ($row['ppi_val'])*($row['ppi_credits']);
+              }
+              $total_credits+=$credit_total;
+              $total_grade_points+=$sum;
+              $ppi = $total_grade_points/$total_credits;
+              $ppi = round($ppi,3);
+              $_SESSION['ppi'] = $ppi;
           }
           $_SESSION['grade_pointer'] = $pointers;
           $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
