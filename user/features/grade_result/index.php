@@ -252,6 +252,9 @@
             }
           $pointers = $sum/$credit_total;
           $pointers = round($pointers,3);
+          if($_SESSION['user_semester_id'] == $_POST['semester']){
+              //CONTINUE FROM HERE
+          }
           $_SESSION['grade_pointer'] = $pointers;
           $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
           $insert_query .= "VALUES($sum,$credit_total,{$_POST['semester']},{$_SESSION['user_id']})"; 
