@@ -17,26 +17,32 @@
                 return 'Sixth';
         }
     }
-?>                  <!--After submit button clicked-->  
+?> 
+<?php 
+    if(!isset($_SESSION['grade_pointer']) && isset($_GET['show_spi'])){
+        header('Location:./');
+    }
+?>                 <!--After submit button clicked-->  
                     <?php
-                            if(isset($_POST['spi'])){
+                            if(isset($_GET['show_spi'])){
+                                if($_GET['show_spi'] == 'true'){
                         ?>
                         <div class="row ml-2 mt-3 ml-md-5 mt-md-5">
                             <div class="col-10" style="font-weight:350;font-size:160%;">
                                 Congratulations!
                             </div>
                         </div>
-                       <?php if($_SESSION['user_semester_id'] == $_POST['spi_sem'] && ppi_exists()!=false){?>
-                            <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
-                                <div class="col-10">
-                                    You got <span style="font-weight:500;"><?php echo $_POST['spi']; ?></span> S.P.I. and <span style="font-weight:500;"><?php echo $_POST['ppi'] ?></span> P.P.I.
-                                </div>
+                       <?php if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()!=false){?>
+                        <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                            <div class="col-10">
+                                You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><?php echo $_SESSION['ppi'] ?></span> P.P.I.
                             </div>
+                        </div>
                         <?php }
-                        else if($_SESSION['user_semester_id'] == $_POST['spi_sem'] && ppi_exists()==false){ ?>
+                        else if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()==false){ ?>
                             <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
                                 <div class="col-10">
-                                    You got <span style="font-weight:500;"><?php echo $_POST['spi']; ?></span> S.P.I. and <span style="font-weight:500;"><a href='../add_spi'><i class='far fa-question-circle' style='font-size:22px;'></i></a></span> P.P.I.
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><a href='../add_spi'><i class='far fa-question-circle' style='font-size:22px;'></i></a></span> P.P.I.
                                 </div>
                             </div>
                         <?php } 
@@ -44,13 +50,13 @@
                         ?>
                             <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
                                 <div class="col-10">
-                                    You got <span style="font-weight:500;"><?php echo $_POST['spi']; ?></span> S.P.I.
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
                                 </div>
-                            </div>
+                            </div>`
                         <?php } ?>
                         <div class="row mx-2 mx-md-5 mt-3 p-1" style="font-weight:370; font-size:130%; border:1px solid black;">
                             <div class="col-11">
-                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet.
+                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet,
                             </div>
                         </div>
                         <div class="alert alert-success text-center mt-3">
@@ -58,12 +64,13 @@
                                 <a href="../feedback">Click Here.</a>
                         </div>
                         <?php
+                                }
                             }
                         ?>
                         <?php $user_id = $_SESSION['user_semester_id']; ?>
                         <!-- FORM -->
                         <?php
-                            if(!isset($_POST['spi'])){
+                            if(!isset($_GET['show_spi'])){
                         ?>
                         <form action="" method = "post" class="col-xs-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 form-group">
                                 <select name="semester" class="form-control" id="sem_id" onchange="check()">
@@ -275,13 +282,13 @@
        }
     </style>
         <!-- JQUERY CODE -->
-<script>
-    $(document).ready(function(){
-        $('.js--mobile-icon').click(function(){
-          $('.js--main-menu1').toggle("3000");
-        })
-    });
-</script> 
+    <script>
+        $(document).ready(function(){
+            $('.js--mobile-icon').click(function(){
+            $('.js--main-menu1').toggle("3000");
+            })
+        });
+    </script> 
     <?php 
         if(isset($_POST['submit'])){
             $sum = 0;
@@ -351,24 +358,15 @@
               $total_grade_points+=$sum;
               $ppi = $total_grade_points/$total_credits;
               $ppi = round($ppi,3);
+              $_SESSION['ppi'] = $ppi;
           }
-          ?>
-          <?php
-            $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
-            $insert_query .= "VALUES($sum,$credit_total,{$_POST['semester']},{$_SESSION['user_id']})"; 
-            $result = mysqli_query($result_connection,$insert_query);
-            check_query($result);
-          ?>
-          <form action="" method="post" name="form">
-            <input type="number" value="<?php echo $pointers; ?>" name="spi" hidden>
-            <input type="number" value="<?php echo $ppi; ?>" name="ppi" hidden>
-            <input type="number" value="<?php echo $_POST['semester']; ?>" name="spi_sem" hidden>
-          </form>
-          <script>
-                document.form.submit();
-          </script>
-          <?php
+          $_SESSION['grade_pointer'] = $pointers;
+          $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
+          $insert_query .= "VALUES($sum,$credit_total,{$_POST['semester']},{$_SESSION['user_id']})"; 
+          $result = mysqli_query($result_connection,$insert_query);
+          check_query($result);
+          header('location:index.php?show_spi=true');
         }
-        ?>
+    ?>
 </body>
 </html>
