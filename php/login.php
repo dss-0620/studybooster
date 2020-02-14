@@ -12,24 +12,6 @@
     }
 ?>
 <?php 
-    //whether ip is from share internet
-    if (!empty($_SERVER['HTTP_CLIENT_IP']))   
-      {
-        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-      }
-    //whether ip is from proxy
-    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))  
-      {
-        $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-      }
-    //whether ip is from remote address
-    else
-      {
-        $ip_address = $_SERVER['REMOTE_ADDR'];
-      }
-    //echo $ip_address;
-?>
-<?php 
     if(isset($_POST['username']) && isset($_POST['password']))
     {
         
@@ -50,15 +32,6 @@
         cookie_set($_POST['username']);
         $form_password=$_POST['password'];
         $db_data=array();
-        // $secure_query = mysqli_prepare($connection,"SELECT user_id,user_password,user_firstname,user_lastname,user_role,user_account_status,user_semester_is,user_college_id,user_branch_id,username,user_group,storage FROM users WHERE username = ? ");
-        // mysqli_stmt_bind_param($secure_query,"s",$form_username);
-        // mysqli_stmt_execute($secure_query);
-        // mysqli_stmt_bind_result($secure_query,$db_data['user_id'],$db_data['user_password'],$db_data['user_firstname'],$db_data['user_lastname'],$db_data['user_role'],$db_data['user_account_status'],$db_data['user_semester_id'],$db_data['user_college_id'],$db_data['user_branch_id'],$db_data['username'],$db_data['user_group'],$db_data['storage']);
-        // $query="SELECT * FROM users ";
-        // $query.="WHERE username = '$form_username'";
-        // $result=mysqli_query($connection,$query);
-        // if(!$result)
-        //     die('QUERY FAILED'.mysqli_error($connection));
         $db_data = mysqli_fetch_assoc($result);
         $db_user_id=$db_data['user_id'];
         $db_password=$db_data['user_password'];
