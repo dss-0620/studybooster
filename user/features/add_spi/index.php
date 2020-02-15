@@ -155,7 +155,7 @@
                                     <div class="form-group">
                                         <select name="option_val" class="custom-select" id="ppi" onchange="check('ppi','submit-text')">
                                             <option value="null" selected hidden disabled>Select one Option</option>
-                                            <option value="ppi">Enter current P.P.I.</option>
+                                            <option value="ppi">Enter current P.P.I. (Recommended)</option>
                                             <option value="spi">Enter S.P.I. of each sem</option>
                                         </select>
                                     </div>

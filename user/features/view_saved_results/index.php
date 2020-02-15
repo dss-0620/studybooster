@@ -110,7 +110,6 @@
                                     $total_credits += $row['ppi_credits'];
                                     $total_grade_points += ($row['ppi_val'])*($row['ppi_credits']);
                                 }
-                                echo "Current P.P.I.:".$total_grade_points/$total_credits;
                             ?>
                            <?php 
                            for($j=0;$j<$count;$j++){
