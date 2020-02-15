@@ -1,22 +1,7 @@
 <?php include "../header.php" ?>
 <?php include "../navigation.php" ?>
 <?php 
-    function number($var){
-        switch($var){
-            case 1:
-                return 'First';
-            case 2:
-                return 'Second';
-            case 3:
-                return 'Third';
-            case 4:
-                return 'Fourth';
-            case 5:
-                return 'Fifth';
-            case 6:
-                return 'Sixth';
-        }
-    }
+    $number = [1=>"First",2=>"Second",3=>"Third",4=>"Fourth",5=>"Fifth",6=>"Sixth"];
 ?> 
 <?php 
     if(!isset($_SESSION['grade_pointer']) && isset($_GET['show_spi'])){
@@ -52,7 +37,7 @@
                                 <div class="col-10">
                                     You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
                                 </div>
-                            </div>`
+                            </div>
                         <?php } ?>
                         <div class="row mx-2 mx-md-5 mt-3 p-1" style="font-weight:370; font-size:130%; border:1px solid black;">
                             <div class="col-11">
@@ -76,7 +61,7 @@
                                 <select name="semester" class="form-control" id="sem_id" onchange="check()">
                                     <?php
                                 if(isset($_POST['sem'])){
-                                    $sem = number($_POST['semester']);
+                                    $sem = $number[$_POST['semester']];
                                     echo "<option value='{$_POST['semester']}' selected disabled hidden>$sem</option>";
                                 }
                                 else{
