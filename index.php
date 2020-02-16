@@ -278,7 +278,7 @@ don’t worry about anyone finding it.</span>
                  </div>
                 <div class="row mx-0">
                     <div class="col d-flex justify-content-center mt-3 mb-3 text1">
-                            Website Built by &nbsp;<span>Devansh Suthar</span>
+                            Web App Built by &nbsp;<span>Devansh Suthar</span>
                     </div>
                 </div>
                 <div class="row mx-0">

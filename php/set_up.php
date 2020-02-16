@@ -14,6 +14,9 @@
     if(isset($_COOKIE['pin_login_username']) && isset($_COOKIE['SJKHDKJASDOEO'])){
         header('location:pin_login.php');
     }
+    if(!isset($_SESSION['username'])){
+        header('Location:login_page.php');
+    }
 ?>
     <!-- SET COOKIE HELPER FUNCTION -->
 <?php
