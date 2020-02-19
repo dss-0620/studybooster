@@ -41,7 +41,7 @@
                         <?php } ?>
                         <div class="row mx-2 mx-md-5 mt-3 p-1" style="font-weight:370; font-size:130%; border:1px solid black;">
                             <div class="col-11">
-                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet,
+                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet.
                             </div>
                         </div>
                         <div class="alert alert-success text-center mt-3">
