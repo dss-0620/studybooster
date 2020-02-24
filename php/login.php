@@ -11,11 +11,19 @@
         setcookie($name,$email,time()+(30*86400),"/"); 
     }
 ?>
+<?php
+    function test_input($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+?>
 <?php 
     if(isset($_POST['username']) && isset($_POST['password']))
     {
         
-        $form_username=$_POST['username'];
+        $form_username=test_input($_POST['username']);
         $query="SELECT * FROM users ";
         $query.="WHERE username_id = '$form_username'";
         $result=mysqli_query($connection,$query);
@@ -30,7 +38,7 @@
                 die('QUERY FAILED'.mysqli_error($connection));
         }
         cookie_set($_POST['username']);
-        $form_password=$_POST['password'];
+        $form_password=test_input($_POST['password']);
         $db_data=array();
         $db_data = mysqli_fetch_assoc($result);
         $db_user_id=$db_data['user_id'];
