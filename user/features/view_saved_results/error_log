@@ -1542,3 +1542,32 @@ Stack trace:
 [29-Jan-2020 02:16:12 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
 [29-Jan-2020 02:16:12 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 4
 [29-Jan-2020 02:16:12 UTC] PHP Notice:  Undefined index: user_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 5
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 4
+[06-Feb-2020 13:00:40 UTC] PHP Notice:  Undefined index: user_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 5
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/view_past_results.php on line 4
+[08-Feb-2020 12:06:00 UTC] PHP Notice:  Undefined index: user_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/view_past_results.php on line 6
+[08-Feb-2020 17:56:10 UTC] PHP Notice:  Undefined offset: 1 in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 148
+[08-Feb-2020 17:56:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSubject_count() on null in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php:149
+Stack trace:
+#0 {main}
+  thrown in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 149
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 4
+[09-Feb-2020 05:45:15 UTC] PHP Notice:  Undefined index: user_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 5
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 4
+[09-Feb-2020 05:45:53 UTC] PHP Notice:  Undefined index: user_id in /home/x512mzzd7ayc/public_html/user/features/view_saved_results/index.php on line 5

@@ -360,3 +360,43 @@ Stack trace:
 [20-Jan-2020 14:58:54 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 6
 [20-Jan-2020 14:58:55 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
 [20-Jan-2020 14:58:55 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 6
+[06-Feb-2020 11:31:05 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 3
+[06-Feb-2020 11:31:05 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 7
+[06-Feb-2020 11:31:05 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 12
+[06-Feb-2020 11:31:05 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 39
+[06-Feb-2020 11:31:05 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 41
+[06-Feb-2020 11:31:09 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 3
+[06-Feb-2020 11:31:09 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 7
+[06-Feb-2020 11:31:09 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 12
+[06-Feb-2020 11:31:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 39
+[06-Feb-2020 11:31:09 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 41
+[06-Feb-2020 11:31:12 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 3
+[06-Feb-2020 11:31:12 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 7
+[06-Feb-2020 11:31:12 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 12
+[06-Feb-2020 11:31:13 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 3
+[06-Feb-2020 11:31:13 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 7
+[06-Feb-2020 11:31:13 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 12
+[06-Feb-2020 11:31:17 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 3
+[06-Feb-2020 11:31:17 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 7
+[06-Feb-2020 11:31:17 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/x512mzzd7ayc/public_html/php/dbs.php on line 12
+[06-Feb-2020 11:31:17 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login_pin.php on line 40
+[15-Feb-2020 18:46:26 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/php/set_up.php on line 44
+[15-Feb-2020 18:46:26 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/php/set_up.php on line 46
+[15-Feb-2020 18:46:30 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/php/set_up.php on line 44
+[15-Feb-2020 18:46:30 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/php/set_up.php on line 46
+[24-Feb-2020 17:35:59 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:35:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 39
+[24-Feb-2020 17:35:59 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 41
+[24-Feb-2020 17:36:01 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:02 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:05 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:05 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login_pin.php on line 40
+[24-Feb-2020 17:36:07 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:09 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:14 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 39
+[24-Feb-2020 17:36:14 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 41
+[24-Feb-2020 17:36:17 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:22 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'studybooster_db1'@'localhost' to database 'studybooster_getresult' in /home/x512mzzd7ayc/public_html/php/dbs.php on line 2
+[24-Feb-2020 17:36:22 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 39
+[24-Feb-2020 17:36:22 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/x512mzzd7ayc/public_html/php/login.php on line 41

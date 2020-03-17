@@ -102,13 +102,7 @@
                         <h4  class="heading-user1" style="font-weight:500; font-size:130%; color:grey;"><?php echo $_SESSION['firstname'];?>&nbsp;<?php echo $_SESSION['lastname'];?><h4>
                         <!-- <a href="php/subject_entry.php" class="btn btn-primary">Enter Subjects</a> -->
                         </div>
-                        <?php $user_id = $_SESSION['user_semester_id'];?>
-                        <?php if($user_id == 2){ ?>
-                            <div class="alert alert-warning mt-3">
-                                <strong>We are extremly Sorry for wrong S.P.I. calculation(By Grades not Marks) by our system. Please recalculate your S.P.I. using grades. Ignore if already recalculated.</strong>
-                                <a href="features/profile">Click Here to change semester</a>
-                            </div>
-                        <?php } ?>
+                        <?php $user_id = $_SESSION['user_id']; ?>
                         <?php if($user_id<337){?>
                             <div class="alert alert-primary mt-3">
                                 <strong>Your Semester has been automatically updated  by the System </strong>you can see the past semester saved results in <a href='features/view_saved_results'>view saved results</a> section.

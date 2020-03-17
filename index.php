@@ -54,7 +54,7 @@
        <!-- NAVBAR -->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top pt-2" style="z-index:10000; background-color:rgba(0,0,0,0) !important;">
                     <div class="container">
-                        <a href="" class="navbar-brand">Studybooster</a>
+                        <img src="css/img1/sb-last1.png" class="img-fluid" style="height:75px;">
                         <button class="navbar-toggler" data-toggle="collapse" onclick="change()" data-target="#NAVBAR">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -138,7 +138,7 @@
                     ?>
                     <?php
                         if(isset($_SESSION['role'])){
-                            if($_SESSION['role'] == 'admin'){
+                            if($_SESSION['role'] == 'user'){
                     ?>
                                 <a href="user/" class="heading-button1 mr-2">User Page</a>
                                 <a href="user/features/logout.php" class="heading-button2 ml-2">Logout</a>
@@ -154,11 +154,11 @@
                             <form action="php/login.php" class="form-group" method="POST">
                                 <div class="form-group input-group my-4">
                                         <div class="input-group-prepend"><i class="icon ion-md-person input-group-text" style="font-size:1.2rem;"></i></div>
-                                    <input type="text" name="username" class="form-control" placeholder="Username / E-mail">
+                                    <input type="text" name="username" class="form-control" placeholder="Username / E-mail" required>
                                 </div>
                                 <div class="form-group input-group my-4">
                                         <div class="input-group-prepend"><i class="icon ion-md-lock input-group-text" style="font-size:1.3rem;"></i></div>
-                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                                 </div>
                                 <div class="form-group mt-4 mb-4">
                                     <input type="submit" value="Login Securely" class="btn btn-primary btn-block">
@@ -278,7 +278,7 @@ don’t worry about anyone finding it.</span>
                  </div>
                 <div class="row mx-0">
                     <div class="col d-flex justify-content-center mt-3 mb-3 text1">
-                            Website Built by &nbsp;<span>Devansh Suthar</span>
+                            Web App Built by &nbsp;<span>Devansh Suthar</span>
                     </div>
                 </div>
                 <div class="row mx-0">

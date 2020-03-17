@@ -789,3 +789,6 @@ Stack trace:
 [30-Jan-2020 15:24:34 UTC] PHP Notice:  Undefined index: college_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 203
 [30-Jan-2020 15:24:34 UTC] PHP Notice:  Undefined index: branch_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 204
 [30-Jan-2020 15:24:34 UTC] PHP Notice:  Undefined index: semester_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 205
+[18-Feb-2020 19:31:42 UTC] PHP Notice:  Undefined index: college_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 203
+[18-Feb-2020 19:31:42 UTC] PHP Notice:  Undefined index: branch_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 204
+[18-Feb-2020 19:31:42 UTC] PHP Notice:  Undefined index: semester_id in /home/x512mzzd7ayc/public_html/user/features/signup.php on line 205

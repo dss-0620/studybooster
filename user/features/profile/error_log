@@ -412,3 +412,27 @@
 [25-Jan-2020 13:37:25 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 22
 [25-Jan-2020 13:37:25 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 23
 [27-Jan-2020 18:43:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/user/features/delete.php on line 1
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 21
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 22
+[07-Feb-2020 13:16:14 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 23
+[09-Feb-2020 16:48:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/user/features/delete.php on line 1
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 21
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 22
+[09-Feb-2020 16:49:03 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 23
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: role in /home/x512mzzd7ayc/public_html/user/features/header.php on line 9
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 9
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: firstname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: lastname in /home/x512mzzd7ayc/public_html/user/features/navigation.php on line 32
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: user_college_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 21
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: user_branch_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 22
+[09-Feb-2020 16:49:04 UTC] PHP Notice:  Undefined index: user_semester_id in /home/x512mzzd7ayc/public_html/user/features/profile/index.php on line 23
+[18-Feb-2020 03:36:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/x512mzzd7ayc/public_html/user/features/delete.php on line 1
+[18-Feb-2020 03:36:04 UTC] PHP Notice:  Undefined variable: destination in /home/x512mzzd7ayc/public_html/user/features/delete.php on line 67
