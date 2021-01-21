@@ -22,6 +22,7 @@
                             <div class="row pl-3 mb-3 link-type1"><a href="../../"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="../add_result/"><i class="far fa-plus-square mr-2"></i>Create new result</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="../grade_result/"><i class="fas fa-calculator mr-2"></i>Calculate S.P.I. by Grades</a></div>
+                            <div class="row pl-3 my-3 link-type1"><a href="../add_spi"><i class="far fa-plus-square mr-2"></i>Add S.P.I.</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="../view_saved_results"><i class="fas fa-binoculars mr-2"></i>View saved results</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="../change_password"><i class="far fa-edit mr-2"></i>Change Password</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="../feedback"><i class="far fa-comments mr-2"></i>Give feedback</a></div>

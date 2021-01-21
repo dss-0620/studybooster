@@ -92,6 +92,7 @@
                             <div class="row pl-3 mb-3 link-type1"><a href=""><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="features/add_result"><i class="far fa-plus-square mr-2"></i>Create new result</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="features/grade_result"><i class="fas fa-calculator mr-2"></i>Calculate S.P.I. by Grades</a></div>
+                            <div class="row pl-3 my-3 link-type1"><a href="features/add_spi"><i class="far fa-plus-square mr-2"></i>Add S.P.I.</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="features/view_saved_results"><i class="fas fa-binoculars mr-2"></i>View saved results</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="features/change_password"><i class="far fa-edit mr-2"></i>Change Password</a></div>
                             <div class="row pl-3 my-3 link-type1"><a href="features/feedback"><i class="far fa-comments mr-2"></i>Give feedback</a></div>
@@ -103,12 +104,6 @@
                         <!-- <a href="php/subject_entry.php" class="btn btn-primary">Enter Subjects</a> -->
                         </div>
                         <?php $user_id = $_SESSION['user_semester_id'];?>
-                        <?php if($user_id == 2){ ?>
-                            <div class="alert alert-warning mt-3">
-                                <strong>We are extremly Sorry for wrong S.P.I. calculation(By Grades not Marks) by our system. Please recalculate your S.P.I. using grades. Ignore if already recalculated.</strong>
-                                <a href="features/profile">Click Here to change semester</a>
-                            </div>
-                        <?php } ?>
                         <?php if($user_id<337){?>
                             <div class="alert alert-primary mt-3">
                                 <strong>Your Semester has been automatically updated  by the System </strong>you can see the past semester saved results in <a href='features/view_saved_results'>view saved results</a> section.

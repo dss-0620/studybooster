@@ -1,36 +1,13 @@
 <?php include "../header.php" ?>
 <?php include "../navigation.php" ?>
 <?php 
-    // for profile
-    // $query_ppi = "SELECT total,total_credits FROM grade_pointers WHERE student_id = {$_SESSION['user_id']} ";
-    // $query_ppi_result = mysqli_query($result_connection,$query_ppi);
-    // check_query1($query_ppi);
-    // $total = 0;
-    // $credits = 0;
-    // while($row_ppi = mysqli_fetch_assoc($query_ppi_result))
-    // {
-    //     $total += $row_ppi['total'];
-    //     $credits += $row_ppi['total_credits'];
-    // }
-    // $ppi = round(($total/$credits),3);
-    // echo $ppi;
-    function number($var){
-        switch($var){
-            case 1:
-                return 'First';
-            case 2:
-                return 'Second';
-            case 3:
-                return 'Third';
-            case 4:
-                return 'Fourth';
-            case 5:
-                return 'Fifth';
-            case 6:
-                return 'Sixth';
-        }
+    $number = [1=>"First",2=>"Second",3=>"Third",4=>"Fourth",5=>"Fifth",6=>"Sixth"];
+?> 
+<?php 
+    if(!isset($_SESSION['grade_pointer']) && isset($_GET['show_spi'])){
+        header('Location:./');
     }
-?>                  <!--After submit button clicked-->  
+?>                 <!--After submit button clicked-->  
                     <?php
                             if(isset($_GET['show_spi'])){
                                 if($_GET['show_spi'] == 'true'){
@@ -40,14 +17,31 @@
                                 Congratulations!
                             </div>
                         </div>
+                       <?php if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()!=false){?>
                         <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
                             <div class="col-10">
-                                You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
+                                You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><?php echo $_SESSION['ppi'] ?></span> P.P.I.
                             </div>
                         </div>
+                        <?php }
+                        else if($_SESSION['user_semester_id'] == $_SESSION['check_semester'] && ppi_exists()==false){ ?>
+                            <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                                <div class="col-10">
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I. and <span style="font-weight:500;"><a href='../add_spi'><i class='far fa-question-circle' style='font-size:22px;'></i></a></span> P.P.I.
+                                </div>
+                            </div>
+                        <?php } 
+                        else{
+                        ?>
+                            <div class="row ml-2 ml-md-5 mt-2" style="font-weight:350; font-size:160%;">
+                                <div class="col-10">
+                                    You got <span style="font-weight:500;"><?php echo $_SESSION['grade_pointer']; ?></span> S.P.I.
+                                </div>
+                            </div>
+                        <?php } ?>
                         <div class="row mx-2 mx-md-5 mt-3 p-1" style="font-weight:370; font-size:130%; border:1px solid black;">
                             <div class="col-11">
-                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet,
+                                Note: This is exact S.P.I., you will get same S.P.I. on marksheet if your entered grades matches with marksheet.
                             </div>
                         </div>
                         <div class="alert alert-success text-center mt-3">
@@ -63,24 +57,17 @@
                         <?php
                             if(!isset($_GET['show_spi'])){
                         ?>
-                        <?php if($user_id == 2){ ?>
-                            <div class="alert alert-warning mt-3">
-                                <strong>We are extremly Sorry for wrong S.P.I. calculation(By Grades not Marks) by our system. Please recalculate your S.P.I. using grades. Ignore if already recalculated.</strong>
-                                <a href="features/profile">Click Here to change semester</a>
-                            </div>
-                        <?php } ?>
                         <form action="" method = "post" class="col-xs-9 col-sm-8 col-md-7 col-lg-6 col-xl-5 form-group">
                                 <select name="semester" class="form-control" id="sem_id" onchange="check()">
                                     <?php
                                 if(isset($_POST['sem'])){
-                                    $sem = number($_POST['semester']);
+                                    $sem = $number[$_POST['semester']];
                                     echo "<option value='{$_POST['semester']}' selected disabled hidden>$sem</option>";
                                 }
                                 else{
                                     echo '<option value="null" selected disabled hidden>Select Semester</option>';
                                 }
                             ?>
-                                <!--<option value="null" selected disabled hidden>Select Semester</option>-->
                                     <?php 
                                             $query = "SELECT * FROM semester WHERE semester_id <= {$_SESSION['user_semester_id']}";
                                             $result = mysqli_query($connection,$query);
@@ -98,11 +85,9 @@
                             function check(){
                                 var sem_val = document.getElementById('sem_id').value;
                                 if(sem_val == "null"){
-                                    //console.log("HELLO!!!");
                                     document.getElementById('sem_sub').disabled=true;
                                 }
                                 else{
-                                    //console.log("HELLO");
                                     document.getElementById('sem_sub').disabled=false;
                                 }
                             }
@@ -217,70 +202,6 @@
                 </div>
             </div>  
     </header>
-    <?php 
-        if(isset($_POST['submit'])){
-            $sum = 0;
-            $credit_total = 0;
-            if($_POST['semester'] == 1)
-            { 
-                if($_SESSION['user_group'] == 1){
-                    $query  = "SELECT subject_credit FROM subjects ";
-                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 1 AND group_id=0) OR group_id=1";
-                    $subject_query_result=mysqli_query($connection,$query);
-                    if(!$subject_query_result)
-                        die('SUBJECT FAILED'.mysqli_error($connection));
-                }
-                else if($_SESSION['user_group'] == 2){
-                    $query  = "SELECT subject_credit FROM subjects ";
-                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 2 AND group_id=0) OR group_id=1";
-                    $subject_query_result=mysqli_query($connection,$query);
-                    if(!$subject_query_result)
-                        die('SUBJECT FAILED'.mysqli_error($connection));
-                }
-            }
-            else if($_POST['semester'] == 2)
-            { 
-                if($_SESSION['user_group'] == 2){
-                    $query  = "SELECT subject_credit FROM subjects ";
-                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 1 AND group_id=0) OR group_id=2";
-                    $subject_query_result=mysqli_query($connection,$query);
-                    if(!$subject_query_result)
-                        die('SUBJECT FAILED'.mysqli_error($connection));
-                }
-                else if($_SESSION['user_group'] == 1){
-                    $query  = "SELECT subject_credit FROM subjects ";
-                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 2 AND group_id=0) OR group_id=2";
-                    $subject_query_result=mysqli_query($connection,$query);
-                    if(!$subject_query_result)
-                        die('SUBJECT FAILED'.mysqli_error($connection));
-                }
-            }
-            else{
-                $query="SELECT subject_credit from subjects ";
-                $query.="WHERE college_id = {$_SESSION['user_college_id']} AND semester_id= {$_POST['semester']} AND branch_id = {$_SESSION['user_branch_id']}";
-                $subject_query_result=mysqli_query($connection,$query);
-                check_query($subject_query_result);
-            }
-            $x=0;
-            $arrayofcredit = array();
-            while($subject_row = mysqli_fetch_assoc($subject_query_result)){
-               $arrayofcredit[$x] = $subject_row['subject_credit'];
-               $x++;
-            }
-            for($i = 0; $i < $x; $i++){
-                $credit_total += $arrayofcredit[$i];
-                $sum += $_POST[$i]*$arrayofcredit[$i];
-            }
-          $pointers = $sum/$credit_total;
-          $pointers = round($pointers,3);
-          $_SESSION['grade_pointer'] = $pointers;
-          $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
-          $insert_query .= "VALUES($sum,$credit_total,{$_POST['semester']},{$_SESSION['user_id']})"; 
-          $result = mysqli_query($result_connection,$insert_query);
-          check_query($result);
-          header('location:index.php?show_spi=true');
-        }
-    ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -346,12 +267,91 @@
        }
     </style>
         <!-- JQUERY CODE -->
-<script>
-    $(document).ready(function(){
-        $('.js--mobile-icon').click(function(){
-          $('.js--main-menu1').toggle("3000");
-        })
-    });
-</script> 
+    <script>
+        $(document).ready(function(){
+            $('.js--mobile-icon').click(function(){
+            $('.js--main-menu1').toggle("3000");
+            })
+        });
+    </script> 
+    <?php 
+        if(isset($_POST['submit'])){
+            $sum = 0;
+            $credit_total = 0;
+            $_SESSION['check_semester'] = $_POST['semester'];
+            if($_POST['semester'] == 1)
+            { 
+                if($_SESSION['user_group'] == 1){
+                    $query  = "SELECT subject_credit FROM subjects ";
+                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 1 AND group_id=0) OR group_id=1";
+                    $subject_query_result=mysqli_query($connection,$query);
+                    if(!$subject_query_result)
+                        die('SUBJECT FAILED'.mysqli_error($connection));
+                }
+                else if($_SESSION['user_group'] == 2){
+                    $query  = "SELECT subject_credit FROM subjects ";
+                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 2 AND group_id=0) OR group_id=1";
+                    $subject_query_result=mysqli_query($connection,$query);
+                    if(!$subject_query_result)
+                        die('SUBJECT FAILED'.mysqli_error($connection));
+                }
+            }
+            else if($_POST['semester'] == 2)
+            { 
+                if($_SESSION['user_group'] == 2){
+                    $query  = "SELECT subject_credit FROM subjects ";
+                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 1 AND group_id=0) OR group_id=2";
+                    $subject_query_result=mysqli_query($connection,$query);
+                    if(!$subject_query_result)
+                        die('SUBJECT FAILED'.mysqli_error($connection));
+                }
+                else if($_SESSION['user_group'] == 1){
+                    $query  = "SELECT subject_credit FROM subjects ";
+                    $query .= "WHERE (college_id = {$_SESSION['user_college_id']} AND semester_id = 2 AND group_id=0) OR group_id=2";
+                    $subject_query_result=mysqli_query($connection,$query);
+                    if(!$subject_query_result)
+                        die('SUBJECT FAILED'.mysqli_error($connection));
+                }
+            }
+            else{
+                $query="SELECT subject_credit from subjects ";
+                $query.="WHERE college_id = {$_SESSION['user_college_id']} AND semester_id= {$_POST['semester']} AND branch_id = {$_SESSION['user_branch_id']}";
+                $subject_query_result=mysqli_query($connection,$query);
+                check_query($subject_query_result);
+            }
+            $x=0;
+            $arrayofcredit = array();
+            while($subject_row = mysqli_fetch_assoc($subject_query_result)){
+               $arrayofcredit[$x] = $subject_row['subject_credit'];
+               $x++;
+            }
+            for($i = 0; $i < $x; $i++){
+                $credit_total += $arrayofcredit[$i];
+                $sum += $_POST[$i]*$arrayofcredit[$i];
+            }
+          $pointers = $sum/$credit_total;
+          $pointers = round($pointers,3);
+          if($_SESSION['user_semester_id'] == $_POST['semester'] && ppi_exists()!=false){
+              $ppi_data = cal_ppi();
+              $total_credits=0;
+              $total_grade_points = 0;
+              while($row = mysqli_fetch_assoc($ppi_data)){
+                    $total_credits += $row['ppi_credits'];
+                    $total_grade_points += ($row['ppi_val'])*($row['ppi_credits']);
+              }
+              $total_credits+=$credit_total;
+              $total_grade_points+=$sum;
+              $ppi = $total_grade_points/$total_credits;
+              $ppi = round($ppi,3);
+              $_SESSION['ppi'] = $ppi;
+          }
+          $_SESSION['grade_pointer'] = $pointers;
+          $insert_query = "INSERT INTO grade_pointers(total,total_credits,semester_id,student_id) ";
+          $insert_query .= "VALUES($sum,$credit_total,{$_POST['semester']},{$_SESSION['user_id']})"; 
+          $result = mysqli_query($result_connection,$insert_query);
+          check_query($result);
+          header('location:index.php?show_spi=true');
+        }
+    ?>
 </body>
 </html>

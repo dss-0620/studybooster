@@ -97,10 +97,20 @@
                                     }
                                 ?>
                                 <th class="align-middle">Estimated S.P.I.</th>
+                                <th class="align-middle">Estimated P.P.I.</th>
                                 <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php
+                                $ppi_data = cal_ppi();
+                                $total_credits=0;
+                                $total_grade_points = 0;
+                                while($row = mysqli_fetch_assoc($ppi_data)){
+                                    $total_credits += $row['ppi_credits'];
+                                    $total_grade_points += ($row['ppi_val'])*($row['ppi_credits']);
+                                }
+                            ?>
                            <?php 
                            for($j=0;$j<$count;$j++){
                             echo "<tr>";
@@ -110,10 +120,16 @@
                             for($i=0;$i<($result_array[$j]->getSubject_count());$i++){
                                 echo "<td><a href = 'index.php?rs=$j&sub=$i' title='Click here'>{$sub_arr[$i]->getTotal()}</a></td>";
                             }
+                            $result_array[$j]->calculatePPI($total_grade_points,$total_credits);
+                            $spi = $result_array[$j]->getPPI();
                             $ptr = $result_array[$j]->getSPI();
                             $modal = "MODAL".$result_array[$j]->getResult_id();
                             $modal_id = "#MODAL".$result_array[$j]->getResult_id();
                             echo "<td>$ptr</td>";
+                            if(ppi_exists() == false)
+                                echo "<td><a href='../add_spi'><i class='far fa-question-circle' style='font-size:22px;'></i></a></td>";
+                            else if(ppi_exists() != false)
+                                echo "<td>$spi</td>";
                             echo "<td><button class='btn btn-outline-danger' data-toggle='modal' data-target='$modal_id'>DELETE</button></td>";
                             echo "</tr>"; 
                             ?>
