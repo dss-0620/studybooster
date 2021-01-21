@@ -43,14 +43,14 @@
         $email_id = $name['username'];
         if($email_id != null){
             $mail = new PHPMailer();
-            $mail->SMTPDebug = 0;                                       // Enable verbose debug output
-            $mail->isSMTP();                                            // Set mailer to use SMTP
-            $mail->Host       = Configure::SMTP_HOST;  // Specify main and backup SMTP servers
-            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = Configure::SMTP_USER;                     // SMTP username
-            $mail->Password   = Configure::SMTP_PASSWORD;                               // SMTP password
-            $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-            $mail->Port       = Configure::SMTP_PORT;                                    // TCP port to connect to
+            $mail->SMTPDebug = 0;                                       
+            $mail->isSMTP();                                          
+            $mail->Host       = Configure::SMTP_HOST; 
+            $mail->SMTPAuth   = true;                                  
+            $mail->Username   = Configure::SMTP_USER;                     
+            $mail->Password   = Configure::SMTP_PASSWORD;                               
+            $mail->SMTPSecure = 'tls';                                  
+            $mail->Port       = Configure::SMTP_PORT;                                    
             $mail->isHTML(true);
             $mail->setFrom('no-reply@studybooster.co.in', 'studybooster');
             $mail->addAddress("$email_id", "User");     // Add a //recipient

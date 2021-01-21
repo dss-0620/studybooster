@@ -4,7 +4,7 @@
         const SMTP_HOST = 'smtpout.secureserver.net';
         const SMTP_PORT = 80;
         const SMTP_USER = 'support@studybooster.co.in';
-        const SMTP_PASSWORD = 'log(tanxyzab1)';
+        const SMTP_PASSWORD = '';
     }
 
   function username_exists($var){
