@@ -34,7 +34,7 @@ S.P.I. instantly.
 
 <br/>
 
-#### This is estimated SPI page where student will be redirected on they click calculate button on Add new result page.
+#### This is estimated SPI page where student will be redirected on when they click calculate button on Add new result page.
 <br/> <br/>
 
 ### View Saved results
